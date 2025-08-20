@@ -1,0 +1,32 @@
+.form-container {
+    
+    padding-left: 300px;
+    padding-bottom: 20px;
+    padding-right: 0200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(218, 247, 248);
+    
+    margin-left: 100px;
+    margin-right: 250px;
+    margin-bottom: 200px;
+    align-items: center;
+  
+    
+  }
+  .container-fluid{
+    margin-bottom: 50px;
+  }
+
+  .radio-btn {
+    margin-right: 50px;
+    margin-bottom: 30px;
+  }
+
+  button{
+    height: 40px;
+    margin-left: 70px;
+    margin-right: 100px;
+    background-color: rgba(9, 24, 245, 0.932);
+    color: rgb(255, 250, 251);
+}

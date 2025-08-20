@@ -1,0 +1,64 @@
+<form [formGroup]="uploadform">
+
+
+    <div class="form-container">
+        <div class="container-fluid ">
+            <h1 style="margin-bottom:50Px ;">Number System Conversion</h1>
+            
+
+            <label
+                style="margin-right: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;">Form
+                : </label>
+
+            <mat-radio-group aria-label="Select an option" formControlName="option">
+
+                <mat-radio-button class="radio-btn" id="option1" name="binary1" value="binary1"
+               >Binary</mat-radio-button>
+
+                <mat-radio-button class="radio-btn" id="option2" name="octal1" value="octal1"
+                >Octal</mat-radio-button>
+
+                <mat-radio-button class="radio-btn" id="option3" name="decimal1" value="decimal1"
+                >Decimal</mat-radio-button>
+
+                <mat-radio-button class="radio-btn" id="option4" name="hex1" value="hex1" 
+                >Hex</mat-radio-button>
+
+            </mat-radio-group>
+
+            <br>
+
+            <mat-radio-group aria-label="Select an option" formControlName="option2">
+                <label
+                    style="margin-right: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;">To
+                    : </label>
+
+                <mat-radio-button class="radio-btn" id="option5" name="binary2" value="binary2"
+                >Binary</mat-radio-button>
+
+                <mat-radio-button class="radio-btn" id="option6" name="Octal2" value="Octal2"
+                >Octal</mat-radio-button>
+
+                <mat-radio-button class="radio-btn" id="option7" name="decimal2" value="decimal2"
+                >Decimal</mat-radio-button>
+
+                <mat-radio-button class="radio-btn" id="option8" name="hex2" value="hex2"
+                >Hex</mat-radio-button>
+
+            </mat-radio-group>
+
+            <div >
+                <input  id = "transNumber" placeholder="Add the number" style="width: 400px;" formControlName="transNumber" #No1=''>
+                <div *ngIf="transNumber?.invalid && transNumber?.touched" >
+                <small *ngIf="transNumber?.errors?.['required']" style="color: red;">Number is
+                    required.</small>
+                    </div>
+                <button style="width: 100px;" (click)=ChecktypeofNumber(No1.value) formControlName="covertbt">Convert</button>
+            </div>
+            <h1
+                style="margin-top:30px ; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;font-size:x-large;">Result
+                : {{Result}}</h1>
+            <button [disabled]="uploadform.invalid" style="align-items: center; margin-left: 150px; width:100px " type="button" (click)="ClearData()">Clear</button>
+        </div>
+    </div>
+</form>
